@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find charging station</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" >
+
+</head>
+<body>
+    <div class="jumbotron">
+      <div class="container" id="container">
+                <!--div class="header clearfix"-->
+        {% include 'findchargeeasy/header.html'%} <!-- to get rid of this later maybe -->
+                    <!--/div-->
+
+        {% block main_content %}
+
+        {% endblock %}
+
+          </div>
+        </div>
+      <footer class="footer">
+          {% include 'findchargeeasy/footer.html' %}
+      </footer>
+</body>
+</html>
+
