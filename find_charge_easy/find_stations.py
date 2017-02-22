@@ -35,14 +35,34 @@ def find_stations(latitude, longitude, distance):
                 data = json.loads(response.text)
                 for i in range(len(data['chargerstations'])):
                     charge_id.append(data['chargerstations'][i]['csmd']['id'])
-                    address_temp = [data['chargerstations'][i]['csmd']['Street'],
-                                    data['chargerstations'][i]['csmd']['House_number'],
+                    address_temp = [str(data['chargerstations'][i]['csmd']['Street']),
+                                    str(data['chargerstations'][i]['csmd']['House_number']),
                                     #data['chargerstations'][i]['csmd']['Description_of_location'] # was delited temporarly
                                     ]
-                    address.append(', '.join(address_temp)) # just to check i will change ', ' with '\'
-                    description.append(data['chargerstations'][i]['csmd']['Description_of_location'])
-                   # "Number_charging_points", "Available_charging_points",
+                    address.append(', '.join(address_temp))
                     location.append(data['chargerstations'][i]['csmd']['Position'])
+
+                    description_temp = [str(data['chargerstations'][i]['csmd']['Description_of_location']),
+                                        "Number of points: " + str(data['chargerstations'][i]['csmd']['Number_charging_points']),
+                                        "Number of available: " + str(data['chargerstations'][i]['csmd']['Available_charging_points']),
+                                        "Owned by: " + data['chargerstations'][i]['csmd']['Owned_by'],
+                                        data['chargerstations'][i]['attr']['st']['24']['attrname'] + ': ' +
+                                        data['chargerstations'][i]['attr']['st']['24']['trans'],
+                                        #data['chargerstations'][i]['attr']['st']['22']['attrname'] + ': ' + # public funding
+                                        #data['chargerstations'][i]['attr']['st']['22']['trans'],
+                                        data['chargerstations'][i]['attr']['st']['7']['attrname'] + ': ' +
+                                        data['chargerstations'][i]['attr']['st']['7']['trans'],
+                                        data['chargerstations'][i]['attr']['st']['6']['attrname'] + ': ' +
+                                        data['chargerstations'][i]['attr']['st']['6']['trans'],
+                                        data['chargerstations'][i]['attr']['st']['3']['attrname'] + ': ' +
+                                        data['chargerstations'][i]['attr']['st']['3']['trans'],
+                                        data['chargerstations'][i]['attr']['st']['2']['attrname'] + ': ' +
+                                        data['chargerstations'][i]['attr']['st']['2']['trans']
+                                        ]
+                    description.append(', '.join(description_temp))
+                    #description.append(data['chargerstations'][i]['csmd']['Description_of_location'])
+                   # "Number_charging_points", "Available_charging_points",
+#                    location.append(data['chargerstations'][i]['csmd']['Position'])
             except(ValueError, KeyError, TypeError):
                 print(ValueError, KeyError, TypeError)
                 pass
