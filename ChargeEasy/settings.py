@@ -24,7 +24,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = "l4by4&p=c3_yb+zmf2z)!ot_=#q=3kkck#4a5gxb)ez1lx!ub)"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False#True
 
 # Application definition
 
@@ -119,7 +119,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = ['.herokuapp.com',
-                 '.herokuapp.com.']
+                 '.herokuapp.com.',
+                 'salty-hollows-23919.herokuapp.com',
+                 'salty-hollows-23919.herokuapp.com.']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
