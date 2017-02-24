@@ -14,7 +14,7 @@ def find_stations(latitude, longitude, distance):
     description = [] # new variable for description of the ch station
     location = []
 
-    url = 'http://nobil.no/api/server/search.php'
+    url = 'https://nobil.no/api/server/search.php'
     request = {'apikey': '9d74b4c676ecf89e8bc48da4a5628425',
                'apiversion': '3',
                'action': 'search',
