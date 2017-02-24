@@ -18,11 +18,11 @@
         var mapCanvas = document.getElementById('map');
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
-        var position_image = 'https://icons.iconarchive.com/icons/e-young/gur-project/32/map-pointer-icon.png';
+        //var position_image = 'https://icons.iconarchive.com/icons/e-young/gur-project/32/map-pointer-icon.png';
         var marker = new google.maps.Marker({
             position: latlng,
             map: map,
-            icon: position_image,
+            //icon: position_image,
             title: "Min posisjon"});
 
         {% for lat, lon, addr, descr in lat_lon_zip %}
