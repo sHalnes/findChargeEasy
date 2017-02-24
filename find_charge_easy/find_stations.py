@@ -27,7 +27,6 @@ def find_stations(latitude, longitude, distance):
 
     response = requests.post(url, data=request)
 
-    #response = requests.get(url, data=request)# here if needs we can change get by post (find out what's difference)
     if response.status_code == 200:
         # message that there is no charging stations takes less than 30 characters
         if len(response.text) > 30:
@@ -60,29 +59,18 @@ def find_stations(latitude, longitude, distance):
                                         data['chargerstations'][i]['attr']['st']['2']['trans']
                                         ]
                     description.append(', '.join(description_temp))
-                    #description.append(data['chargerstations'][i]['csmd']['Description_of_location'])
-                   # "Number_charging_points", "Available_charging_points",
-#                    location.append(data['chargerstations'][i]['csmd']['Position'])
+
             except(ValueError, KeyError, TypeError):
                 print(ValueError, KeyError, TypeError)
                 pass
             if charge_id and location:
-                # here we have to call another script which will delete all points in db in certain rectangle. We'll do it to
-                # renew information.
+                # make a zip to return all values
                 latitude_list = []
                 longitude_list = []
                 for index in range(len(charge_id)):
                     lat, lon = location[index].strip('()').split(',')
                     latitude_list.append(lat)
                     longitude_list.append(lon)
-                    #charge_point = ChargePoints(charge_id=charge_id[index], address=address[index],
-                    #                            location=GEOSGeometry("POINT(%s %s)" % (lon, lat)), description='description',
-                    #                            payment='no')
-                    #charge_point.save()
-                #lat_lon = zip(latitude_list, longitude_list)
-                # let's zip lattitude, longitude and address
                 lat_lon = zip(latitude_list, longitude_list, address, description)
                 return lat_lon
-                #return lat_lon, address
             print('smthing went wrong')
-#    return lat_lon, address

@@ -2,32 +2,11 @@
 
 {% block main_content %}
 
-<!--h3 class="text-muted">ChargingAround</h3-->
-
-<h1>Charge your car</h1>
+<h2>Finn nærmeste ladestasjon</h2>
 
 
-<!--script type="text/javascript" src = "http://maps.google.com/maps/api/js?sensor=false"></script-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script-->
-
-<!--script>
-
-    navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 30000 });
-    function onSuccess(position){
-        var userLat = position.coords.latitude;
-        var userLang = position.coords.longitude;
-        var pos = (userLat.toString()).concat(',');
-        pos = data_to_send.concat(userLang.toString());
-        document.getElementById('location').value = pos;
-      }
-
-    function onError(error){
-        alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
-    }
-
-</script-->
 
 <div id="loader"></div>
 
@@ -41,7 +20,6 @@
             var userLat = position.coords.latitude;
             var userLang = position.coords.longitude;
             var posisjon = userLat.toString() +", " + userLang.toString();
-            //alert(posisjon);
             document.getElementById("location").value = posisjon;
             document.getElementById("loader").style.display = "none";
             document.getElementById("input_button").hidden = false;
@@ -59,12 +37,11 @@
     <input type="hidden" id="location" name="location" />
          {#{ form.user_position }#}
 
-    <input type="text" id="radius" name="radius" placeholder="type in radius in km" required/>
+    <input type="text" id="radius" name="radius" placeholder="tast inn radius i km" required/>
         {#{ form.radius }#}
 
-    <input type="submit" id="but" class="btn btn-lg btn-success" value="Search"/>
+    <input type="submit" id="but" class="btn btn-success btn-sm" value="Search"/>
 </form>
-
 
 
 {% endblock %}
