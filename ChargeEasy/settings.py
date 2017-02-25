@@ -123,8 +123,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['.herokuapp.com',
                  '.herokuapp.com.',
+                 'salty-hollows-23919.',
                  'salty-hollows-23919.herokuapp.com',
-                 'salty-hollows-23919.herokuapp.com.']
+                 '.salty-hollows-23919.herokuapp.com.']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
