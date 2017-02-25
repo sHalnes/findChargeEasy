@@ -118,7 +118,7 @@ DATABASES['default'].update(db_from_env)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # just added to test error messages
-ADMINS = [('Svetlana', 'svetlana.halnes@outlook.com')]
+#ADMINS = [('Svetlana', 'svetlana.halnes@outlook.com')]
 
 # Allow all host headers
 ALLOWED_HOSTS = ['.herokuapp.com',
