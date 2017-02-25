@@ -35,10 +35,10 @@
 <form method="post" action="map" class="input_button" id="input_button">
     {% csrf_token %}
     <input type="hidden" id="location" name="location" />
-         {#{ form.user_position }#}
+         <!--{#{ form.user_position }#}-->
 
     <input type="text" id="radius" name="radius" placeholder="tast inn radius i km" required/>
-        {#{ form.radius }#}
+        <!--{#{ form.radius }#}-->
 
     <input type="submit" id="but" class="btn btn-success btn-sm" value="Search"/>
 </form>
