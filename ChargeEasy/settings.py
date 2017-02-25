@@ -118,7 +118,14 @@ DATABASES['default'].update(db_from_env)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # just added to test error messages
-#ADMINS = [('Svetlana', 'svetlana.halnes@outlook.com')]
+ADMINS = [('Svetlana', 'svetlana.halnes@outlook.com')]
+EMAIL_HOST = 'smtp.live.com'
+EMAIL_HOST_USER = 'svetlana.chekalkina@hotmail.com'
+EMAIL_HOST_PASSWORD = '3nen9ysansara'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = True
+SERVER_EMAIL = EMAIL_HOST_USER
+
 
 # Allow all host headers
 ALLOWED_HOSTS = ['.herokuapp.com',
@@ -143,35 +150,35 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # in your settings file
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        },
-        'logfile': {
-            'class': 'logging.handlers.WatchedFileHandler',
-            'filename': 'myerror.log'
-        },
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-        'django': {
-            'handlers': ['logfile'],
-            'level': 'ERROR',
-            'propagate': False,
-        },
-    }
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'filters': {
+#         'require_debug_false': {
+#             '()': 'django.utils.log.RequireDebugFalse'
+#         }
+#     },
+#     'handlers': {
+#         'mail_admins': {
+#             'level': 'ERROR',
+#             'filters': ['require_debug_false'],
+#             'class': 'django.utils.log.AdminEmailHandler'
+#         },
+#         'logfile': {
+#             'class': 'logging.handlers.WatchedFileHandler',
+#             'filename': 'myerror.log'
+#         },
+#     },
+#     'loggers': {
+#         'django.request': {
+#             'handlers': ['mail_admins'],
+#             'level': 'ERROR',
+#             'propagate': True,
+#         },
+#         'django': {
+#             'handlers': ['logfile'],
+#             'level': 'ERROR',
+#             'propagate': False,
+#         },
+#     }
+# }
