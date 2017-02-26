@@ -58,10 +58,10 @@
       <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChargeEasy/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="e#401#450#0" expanded="true" />
+                <element signature="e#226#235#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,7 +141,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="326" />
+    <option name="x" value="2" />
+    <option name="y" value="30" />
     <option name="width" value="1261" />
     <option name="height" value="767" />
   </component>
@@ -448,7 +449,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="326" width="1261" height="767" extended-state="0" />
+    <frame x="2" y="30" width="1261" height="767" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -853,10 +854,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChargeEasy/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#401#450#0" expanded="true" />
+            <element signature="e#226#235#0" expanded="true" />
           </folding>
         </state>
       </provider>
