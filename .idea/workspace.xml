@@ -4,7 +4,6 @@
     <list default="true" id="f079a4d6-4487-4020-806c-961b0991eb45" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ChargeEasy/settings.py" afterPath="$PROJECT_DIR$/ChargeEasy/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ChargeEasy/wsgi.py" afterPath="$PROJECT_DIR$/ChargeEasy/wsgi.py" />
     </list>
     <ignored path="ChargeEasy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +48,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChargeEasy/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="151" column="1" selection-start-line="151" selection-start-column="1" selection-end-line="151" selection-end-column="1" />
+            <state relative-caret-position="172">
+              <caret line="153" column="72" selection-start-line="153" selection-start-column="72" selection-end-line="153" selection-end-column="72" />
               <folding>
                 <element signature="e#328#337#0" expanded="true" />
               </folding>
@@ -144,8 +143,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="19" />
-    <option name="y" value="23" />
+    <option name="x" value="17" />
+    <option name="y" value="96" />
     <option name="width" value="1261" />
     <option name="height" value="767" />
   </component>
@@ -452,7 +451,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="19" y="23" width="1261" height="767" extended-state="0" />
+    <frame x="17" y="96" width="1261" height="767" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -859,8 +858,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChargeEasy/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="151" column="1" selection-start-line="151" selection-start-column="1" selection-end-line="151" selection-end-column="1" />
+        <state relative-caret-position="172">
+          <caret line="153" column="72" selection-start-line="153" selection-start-column="72" selection-end-line="153" selection-end-column="72" />
           <folding>
             <element signature="e#328#337#0" expanded="true" />
           </folding>
