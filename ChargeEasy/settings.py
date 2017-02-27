@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     # greater consistency between gunicorn and `./manage.py runserver`. See:
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
-    'django.contrib.staticfiles',
+    #'django.contrib.staticfiles',
     'find_charge_easy',
 ]
 
@@ -131,6 +131,7 @@ SERVER_EMAIL = EMAIL_HOST_USER
 
 # Allow all host headers
 ALLOWED_HOSTS = ['.herokuapp.com',
+                 '127.0.0.1',
                  '.herokuapp.com.',
                  'salty-hollows-23919.',
                  'salty-hollows-23919.herokuapp.com',
@@ -160,7 +161,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
+print('static root', STATIC_ROOT)
+print('staticfiles dir', STATICFILES_DIRS)
+print('base dir', BASE_DIR)
 
 
 
