@@ -1,1 +1,1 @@
-web: gunicorn ChargeEasy.wsgi
+web: python manage.py collectstatic --noinput; gunicorn ChargeEasy.wsgi
