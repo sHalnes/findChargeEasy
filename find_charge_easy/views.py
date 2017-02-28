@@ -16,6 +16,7 @@ def map(request):
     if request.method == 'POST':
         user_position = request.POST.get('location')
         radius = request.POST.get('radius')
+        #print('radius: ', radius)
         # convert radius value to int or set the default value
         default_radius = 1
         # well radius won't be like '' anyway, but just in case

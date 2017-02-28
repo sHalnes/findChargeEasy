@@ -22,7 +22,7 @@ def find_stations(latitude, longitude, distance):
                'lat': latitude,
                'long': longitude,
                'distance': str(distance*1000),
-               'limit': '20'
+               'limit': '20' # the number of stations
                }
 
     response = requests.post(url, data=request)

@@ -14,7 +14,6 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -25,7 +24,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = "l4by4&p=c3_yb+zmf2z)!ot_=#q=3kkck#4a5gxb)ez1lx!ub)"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False#True
+#DEBUG = False # deployment
+DEBUG = True    # test mode
 
 # Application definition
 
@@ -140,18 +140,12 @@ ALLOWED_HOSTS = ['.herokuapp.com',
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-
-
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
 ]
-#STATICFILES_DIRS = [
-#    os.path.join(BASE_DIR, 'static'),
-#]
-
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
@@ -159,11 +153,10 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-print('static root', STATIC_ROOT)
-print('staticfiles dir', STATICFILES_DIRS)
-print('base dir', BASE_DIR)
+#print('static root', STATIC_ROOT)
+#print('staticfiles dir', STATICFILES_DIRS)
+#print('base dir', BASE_DIR)
 
 
 
